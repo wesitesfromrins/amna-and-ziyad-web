@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ziyad ❤️ Amna</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#050816;
+    color:white;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top left,#ff006e55,transparent 30%),
+    radial-gradient(circle at bottom right,#8338ec55,transparent 35%),
+    linear-gradient(135deg,#050816,#0f172a);
+    z-index:-2;
+}
+
+.hearts{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.heart{
+    position:absolute;
+    color:#ff4d8d;
+    animation:float linear forwards;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh) rotate(0deg);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-100px) rotate(360deg);
+        opacity:0;
+    }
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    backdrop-filter:blur(15px);
+    background:rgba(255,255,255,0.05);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    z-index:999;
+}
+
+.logo{
+    font-weight:700;
+    color:#ff80ab;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ff80ab;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.glass{
+    width:900px;
+    max-width:95%;
+    text-align:center;
+    padding:60px;
+    border-radius:30px;
+    backdrop-filter:blur(25px);
+    background:rgba(255,255,255,0.07);
+    border:1px solid rgba(255,255,255,0.12);
+    box-shadow:0 20px 60px rgba(0,0,0,.5);
+}
+
+.subtitle{
+    letter-spacing:4px;
+    color:#ff80ab;
+    margin-bottom:15px;
+}
+
+.hero h1{
+    font-family:'Great Vibes',cursive;
+    font-size:5rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    opacity:.9;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 40px;
+    border-radius:50px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(45deg,#ff006e,#ff80ab);
+    box-shadow:0 10px 30px rgba(255,0,110,.4);
+}
+
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+    font-size:3rem;
+}
+
+.timeline{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    padding:30px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.07);
+    backdrop-filter:blur(15px);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.counter{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:25px;
+}
+
+.counter-box{
+    text-align:center;
+    padding:30px;
+    border-radius:25px;
+    background:rgba(255,255,255,.07);
+}
+
+.counter-box h3{
+    font-size:3rem;
+    color:#ff80ab;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.photo{
+    height:250px;
+    border-radius:25px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:4rem;
+    background:rgba(255,255,255,.07);
+    transition:.4s;
+}
+
+.photo:hover{
+    transform:scale(1.05);
+}
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:25px;
+    display:block;
+}
+.message{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+    padding:50px;
+    border-radius:25px;
+    background:rgba(255,255,255,.07);
+    line-height:1.9;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    margin-top:60px;
+    background:rgba(255,255,255,.05);
+}
+
+footer h2{
+    font-family:'Great Vibes',cursive;
+    font-size:2.8rem;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:3rem;
+}
+
+nav ul{
+    gap:15px;
+    font-size:14px;
+}
+
+.glass{
+    padding:35px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="hearts"></div>
+
+<nav>
+    <div class="logo">❤️ Z & A ❤️</div>
+
+    <ul>
+        <li><a href="#story">Story</a></li>
+        <li><a href="#love">Together</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+
+<div class="glass">
+
+<div class="subtitle">FOREVER & ALWAYS</div>
+
+<h1>
+Ziyad ❤️ Amna 
+</h1>
+
+<p>
+Two hearts, one beautiful journey, endless memories, and a lifetime of love.
+</p>
+
+<a href="#story" class="btn">Our Love Story</a>
+
+</div>
+
+</section>
+
+<section id="story">
+
+<h2 class="section-title">Our Journey ❤️</h2>
+
+<div class="timeline">
+
+<div class="card">
+<h3>💌 First Meeting</h3>
+<p>
+The beginning of a beautiful connection that changed everything.
+</p>
+</div>
+
+<div class="card">
+<h3>🌹 Falling in Love</h3>
+<p>
+Every conversation became special and every day felt brighter.
+</p>
+</div>
+
+<div class="card">
+<h3>✨ Forever Together</h3>
+<p>
+Building dreams, creating memories, and growing stronger together.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="love">
+
+<h2 class="section-title">Time Together ❤️</h2>
+
+<div class="counter">
+
+<div class="counter-box">
+<h3 id="days">0</h3>
+<span>Days</span>
+</div>
+
+<div class="counter-box">
+<h3 id="hours">0</h3>
+<span>Hours</span>
+</div>
+
+<div class="counter-box">
+<h3 id="minutes">0</h3>
+<span>Minutes</span>
+</div>
+
+<div class="counter-box">
+<h3 id="seconds">0</h3>
+<span>Seconds</span>
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2 class="section-title">Our Memories 💕</h2>
+
+<div class="gallery">
+
+    <div class="photo">
+        <img src="photo1.jpeg" alt="Photo 1">
+    </div>
+
+    <div class="photo">
+        <img src="photo2.jpeg" alt="Photo 2">
+    </div>
+
+    <div class="photo">
+        <img src="photo3.jpeg" alt="Photo 3">
+    </div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="message">
+<h2 style="margin-bottom:20px;">A Special Message</h2>
+
+<p>
+Every moment spent together becomes a precious memory.
+Through laughter, dreams, challenges, and happiness,
+our story continues to grow more beautiful every day.
+
+May the bond between <b>Fathimath Rinsiya</b> and
+<b>Shanik Sidan</b> always shine with love, trust,
+respect, and endless happiness. ❤️
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>Ziyad ❤️ Amna</h2>
+
+<p>Made With Love Forever ❤️</p>
+
+</footer>
+
+<script>
+
+// Change this to your actual relationship start date
+const startDate = new Date("2024-01-01T00:00:00");
+
+function updateCounter(){
+
+const now = new Date();
+const diff = now - startDate;
+
+const days = Math.floor(diff/(1000*60*60*24));
+
+const hours = Math.floor(
+(diff%(1000*60*60*24))/(1000*60*60)
+);
+
+const minutes = Math.floor(
+(diff%(1000*60*60))/(1000*60)
+);
+
+const seconds = Math.floor(
+(diff%(1000*60))/1000
+);
+
+document.getElementById("days").textContent = days;
+document.getElementById("hours").textContent = hours;
+document.getElementById("minutes").textContent = minutes;
+document.getElementById("seconds").textContent = seconds;
+}
+
+setInterval(updateCounter,1000);
+updateCounter();
+
+const heartsContainer = document.querySelector(".hearts");
+
+function createHeart(){
+
+const heart = document.createElement("div");
+
+heart.classList.add("heart");
+heart.innerHTML = "❤️";
+
+heart.style.left = Math.random()*100 + "%";
+heart.style.fontSize = (15 + Math.random()*30) + "px";
+heart.style.animationDuration = (5 + Math.random()*6) + "s";
+
+heartsContainer.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},10000);
+}
+
+setInterval(createHeart,250);
+
+</script>
+
+</body>
+</html>
